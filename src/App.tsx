@@ -12,6 +12,7 @@ import BlackjackPage from "./cards/blackjack/Blackjack";
 import SpadesPage from "./cards/spades/Spades";
 import HeartsPage from "./cards/hearts/Hearts";
 import HoldemPage from "./cards/holdem/Holdem";
+import MahjongPage from "./cards/mahjong/Mahjong";
 import CardSetup from "./cards/CardSetup";
 import History from "./History";
 import Archive from "./Archive";
@@ -20,7 +21,7 @@ import Lobby, { Avatar } from "./Lobby";
 import { gameUrl, GAME_META, optsLabel, findByCode, isActive, useOpenLobbies, useSitePresence, type GameId } from "./lib/lobby";
 import { getStreak, knownPeers, recentRooms } from "./lib/fx";
 
-const GAMES: { id: GameId; desc: string; color: string; icon: string; team?: boolean }[] = [
+const GAMES: { id: GameId; desc: string; color: string; icon: string; team?: boolean; play?: string }[] = [
   { id: "wordle", desc: "Guess the hidden word in 6 tries.", color: "#6aaa64", icon: "🟩" },
   { id: "connections", desc: "Group words that share a common thread.", color: "#ba81c5", icon: "🧩" },
   { id: "strands", desc: "Find hidden words and uncover the theme.", color: "#aedfee", icon: "🔤" },
@@ -32,6 +33,7 @@ const GAMES: { id: GameId; desc: string; color: string; icon: string; team?: boo
   { id: "spades", desc: "Bid your tricks, trump with spades, dodge the bags. Partners, cutthroat or two-hand, with a coach.", color: "#2b3a55", icon: "♠️" },
   { id: "hearts", desc: "Pass three, duck the Q♠, or shoot the moon. Four, three or two players, with a coach.", color: "#a8323e", icon: "♥️" },
   { id: "holdem", desc: "No-limit Texas Hold'em for 2–8: blinds, side pots, bots that bluff, and an equity coach.", color: "#1f6b42", icon: "🃏" },
+  { id: "mahjong", desc: "Hong Kong Mahjong vs 3 bots or friends: draw, discard, chow, pung, kong. Trainer from Tile School to a real game.", color: "#7a2e2a", icon: "🀄", play: "/play/mahjong" },
 ];
 const ago = (t: string | number) => { const m = Math.round((Date.now() - new Date(t).getTime()) / 60000); return m < 1 ? "just now" : m < 60 ? `${m}m ago` : `${Math.round(m / 60)}h ago`; };
 
@@ -53,7 +55,7 @@ function Home() {
           <div key={g.id} className="card" style={{ animationDelay: `${i * 60}ms` }}>
             <div className="card-top" style={{ background: g.color }}><span className="icon">{g.icon}</span>{st > 0 && <span className="streak">🔥 {st}</span>}</div>
             <div className="card-body"><h3>{GAME_META[g.id].name}</h3><p>{g.desc}</p>
-              <div className="card-actions">{g.team ? <button className="play" onClick={() => go(`/play/${g.id}`)}>Create a room</button> : <><button className="play" onClick={() => go(`/${g.id}?mode=solo`)}>Play</button><button className="play ghost" onClick={() => go(`/play/${g.id}`)}>Options & friends</button></>}</div></div>
+              <div className="card-actions">{g.team ? <button className="play" onClick={() => go(`/play/${g.id}`)}>Create a room</button> : <><button className="play" onClick={() => go(g.play ?? `/${g.id}?mode=solo`)}>Play</button><button className="play ghost" onClick={() => go(`/play/${g.id}`)}>Options & friends</button></>}</div></div>
           </div>); })}
       </div>
       <div className="lobby-cols">
@@ -99,6 +101,7 @@ export default function App() {
     if (path === "/spades") return <SpadesPage key={k} params={params} />;
     if (path === "/hearts") return <HeartsPage key={k} params={params} />;
     if (path === "/holdem") return <HoldemPage key={k} params={params} />;
+    if (path === "/mahjong") return <MahjongPage key={k} params={params} />;
     if (path === "/archive") return <Archive key={k} />;
     if (path === "/history") return <History key={k} params={params} />;
     return <Home />;

@@ -29,6 +29,8 @@ export function useCardTable<P extends { deadline: number | null }, V = unknown>
   privKey: (p: P) => string = (p: any) => `${p.phase}|${p.round}|${p.handNo ?? ""}`) {
   const [pub, setPub] = useState<P | null>(null);
   const [priv, setPriv] = useState<V | null>(null);
+  // newest private view received, even while older public frames are still replaying (lets a table show your own tiles during the replay)
+  const [privNext, setPrivNext] = useState<V | null>(null);
   const privAt = useRef("");
   const [seat, setSeat] = useState(-1);
   const [pending, setPending] = useState(-1);
@@ -60,6 +62,7 @@ export function useCardTable<P extends { deadline: number | null }, V = unknown>
   }, [show]);
   const enqueue = useCallback((full: P & { frames?: unknown[] }, priv?: V | null) => {
     const { frames, ...rest } = full as P & { frames?: P[] }; const fin = rest as unknown as P;
+    if (priv !== undefined) setPrivNext(priv);
     const prev = shown.current; const busyNow = q.current.length > 0 || timer.current !== null;
     if (!busyNow && (!prev || !frames?.length || dealSpeed() === 0)) { show({ pub: fin, priv }); return; }
     const log = (prev as { log?: unknown } | null)?.log;
@@ -102,7 +105,7 @@ export function useCardTable<P extends { deadline: number | null }, V = unknown>
   const act = useCallback(async (move: Record<string, unknown>) => { setBusy(true); await call({ action: "act", move }); setBusy(false); }, [call]);
   const leave = useCallback(() => { if (id) cardsCall({ id, action: "leave" }, true).catch(() => {}); }, [id]);
   const hint = useCallback(() => call({ action: "hint" }), [call]);
-  return { pub, priv, seat, pending, err, busy: busy || replaying, replaying, skip, act, leave, hint, setErr, refresh: () => call({ action: "view" }) };
+  return { pub, priv, privNext, seat, pending, err, busy: busy || replaying, replaying, skip, act, leave, hint, setErr, refresh: () => call({ action: "view" }) };
 }
 
 /** Lobby "Create lobby → start": once `expect` humans are seated, the lowest seated human deals. Re-polls and retries every 3 s

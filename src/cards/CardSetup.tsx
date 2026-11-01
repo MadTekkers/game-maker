@@ -4,6 +4,7 @@ import { GAME_META, createRoom, gameUrl, type GameId, type Mode } from "../lib/l
 import { ensurePlayer } from "../lib/player";
 import { rememberRoom } from "../lib/fx";
 import "./cards.css";
+import { TrainerStages } from "./mahjong/stages";
 
 type Cfg = { seats: number[]; def: number; seatLabel?: (n: number) => string; seatNote: string; bots: Record<string, string>; train: string; tutorial: string };
 const CFG: Record<string, Cfg> = {
@@ -26,6 +27,10 @@ const CFG: Record<string, Cfg> = {
     bots: { easy: "Calling station: plays most hands, rarely folds a pair", medium: "Tight chart, plays its equity, bluffs a little", hard: "Position charts, reads ranges, c-bets and semi-bluffs" },
     train: "after every action, compare it with 1–3 alternatives: equity, how often a bet folds everyone out, and EV in chips/bb from a few hundred Monte Carlo samples (sample size shown).",
     tutorial: "Every hole card face-up, with beginner → expert tips (pot odds, outs, ranges, EV) before each action, plus your exact equity against the real hands." },
+  mahjong: { seats: [4], def: 4, seatNote: "Always four seats (East, South, West, North). Seats without a person are bots; a joining player takes a bot's seat at the next hand. 1 point = 10 chips, settled every hand.",
+    bots: { easy: "Loose: keeps odd tiles, claims almost everything", medium: "Discards to get closest to ready (shanten)", hard: "Shanten + most useful tiles left + defends against open hands" },
+    train: "a 💡 hint button, and after every discard a coach card compares it with up to 3 better discards (shanten, live useful tiles, chance the next draw helps). Claims are explained too.",
+    tutorial: "Guided game: every hand face-up, a tip on every turn and claim, and a short rule intro the first time each thing happens." },
 };
 
 /** Setup screen for the card games: solo vs bots or a live table, seat count, bot level, train mode. */
@@ -52,6 +57,7 @@ export default function CardSetup({ game }: { game: GameId }) {
   return (
     <div className="page setup card-setup">
       <header className="game-header"><button className="back" onClick={() => go("/")}>‹ Lobby</button><h1>{meta.name}</h1><div className="room-bar" /></header>
+      {game === "mahjong" && <><h2 className="section">New to Mahjong? Learn it in 5 steps</h2><TrainerStages bot={bot} /></>}
       <h2 className="section">How do you want to play?</h2>
       <div className="opt-grid">
         <button className={`opt ${mode === "solo" && !tut ? "on" : ""}`} onClick={() => { setMode("solo"); setTut(false); }}><span className="opt-icon">🤖</span><b>Solo vs computer</b><small>You and bots at the table.</small></button>
