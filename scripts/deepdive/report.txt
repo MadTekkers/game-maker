@@ -1,0 +1,14 @@
+DESC mtv-best-picture: "Grand Hotel" -> Grand Hotel (1932 film) [Adaptation of William Drake play]
+DESC sp-ballon-dor: "George Weah" -> George Weah [President of Liberia from 2018 to 2024]
+NODESC sp-test-cricket: "Australia" -> Australia national cricket team
+DESC sp-test-cricket: "Pakistan" -> Pakistan national cricket team [National sports team]
+NODESC sp-test-cricket: "Zimbabwe" -> Zimbabwe national cricket team
+NODESC sp-test-cricket: "Afghanistan" -> Afghanistan national cricket team
+DESC sp-six-nations: "England" -> England national rugby union team [Sports team]
+DESC pc-stones: "Ian Stewart" -> Ian Stewart (musician) [Scottish keyboardist (1938–1985)]
+DESC pc-gta: "Grand Theft Auto: London 1969" -> Grand Theft Auto: London 1969 [Mission pack for Grand Theft Auto]
+DESC sci-vitamins: "Vitamin K" -> Vitamin K [Fat-soluble vitamers]
+DESC hi-us-money: "Benjamin Franklin" -> Benjamin Franklin [American Founding Father and polymath (1706–1790)]
+DESC hi-us-money: "Alexander Hamilton" -> Alexander Hamilton [American Founding Father (died 1804)]
+DESC hi-royal-houses: "Normandy" -> House of Normandy [Scandinavian rulers of Northern France and England]
+DESC hi-apostles: "Judas Iscariot" -> Judas Iscariot [Disciple and betrayer of Jesus]
