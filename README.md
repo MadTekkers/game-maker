@@ -72,3 +72,17 @@ Tools: `npm run connections:audit` (type mix per source), `npm run connections:v
 Each game in `GAME_META` (`src/lib/lobby.ts`) has `status: "active" | "archived"`. Archived games are hidden from the home cards, open-lobby list, archive week table and history tabs; direct visits to their routes redirect to the lobby (existing room links still work). Code, routes, data, DB tables and puzzles are untouched.
 Currently archived: `crossword` (big crossword), `bee` (Spelling Bee).
 **To restore:** change that game's `status: "archived"` to `status: "active"` in `src/lib/lobby.ts` and push to main.
+
+## Hong Kong Mahjong
+
+`/mahjong` — four-player Hong Kong table Mahjong (144 tiles with flowers) on the shared server-authoritative `cards` edge function
+(`supabase/functions/cards/lib/mahjong`, mirrored from `src/cards/mahjong/engine.ts`). Solo vs 3 bots (easy / medium / hard) or a live
+table (share link or lobby; bots fill empty seats and give them up at the next hand). Only your own tiles, the public melds, flowers,
+ponds and wall *counts* are sent to the browser; the guided game shows every hand face up on purpose.
+
+Trainer (setup page `/play/mahjong`): 1 **Tile School** (`?school=tiles`), 2 **Discard drills** with shanten / useful-tile feedback
+(`?school=drills`, 5 levels), 3 **Guided game** (`tut=1`: tiles face up, tips on every turn and claim, rule intros), 4 **Hints game**
+(`train=1`: hint button + comparison card: your discard vs up to 3 better options with shanten, live useful tiles and next-draw chance),
+5 **Real game**. Learn/term cards, a rules quiz and the faan table sit in the side panel (bottom sheet on phones). Rules, scoring and
+strategy: `docs/strategy/mahjong.md`. Scripts: `scripts/mahjongSmoke.mjs` (API game + leak check), `scripts/mahjongUiSmoke.mjs`
+(browser game), `scripts/mahjongNetworkAudit.mjs` (two-browser leak audit).
