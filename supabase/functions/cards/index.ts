@@ -1,4 +1,4 @@
-// "cards" edge function: the authoritative dealer for every card table (Blackjack, Spades, Hearts, Hold'em).
+// "cards" edge function: the authoritative dealer for every card table (Blackjack, Spades, Hearts, Hold'em, Mahjong).
 // - Shuffles/deals with crypto RNG, validates every move with the same pure-TS engine the client uses, runs all bots, applies timeouts.
 // - Full state (deck/stock order, every hand, seat-token hashes) lives in card_secrets (RLS on, no policies -> service role only).
 // - Only publicView(state) is written to card_games (realtime, anon-readable). A seat's own cards come back only in the reply to
@@ -15,6 +15,7 @@ import * as HT from "./lib/hearts/engine.ts";
 import { heartsTuner } from "./lib/hearts/tune.ts";
 import * as PK from "./lib/holdem/engine.ts";
 import { holdemTuner } from "./lib/holdem/tune.ts";
+import * as MJ from "./lib/mahjong/engine.ts";
 import { tuneLevel, type GameTuner } from "./lib/tune.ts";
 import type { Ctx, Ledger, ParamSet } from "./lib/seats.ts";
 
@@ -39,6 +40,7 @@ const ENGINES: Record<string, Engine> = {
   spades: { ...(SP as unknown as Engine), seats: SP.SEATS, generic: true },
   hearts: { ...(HT as unknown as Engine), seats: HT.SEATS, generic: true },
   holdem: { ...(PK as unknown as Engine), seats: PK.SEATS, generic: true },
+  mahjong: { ...(MJ as unknown as Engine), seats: MJ.SEATS, generic: true },
 };
 const TUNERS: GameTuner[] = [spadesTuner as unknown as GameTuner, heartsTuner as unknown as GameTuner, holdemTuner as unknown as GameTuner];
 
