@@ -194,7 +194,7 @@ function endDraw(s: MjState, ctx: Ctx) {
   h.act = h.act.map(() => null); pushLog(s, `Hand ${s.handNo}: the wall ran out — a draw, nobody scores`, ctx.now);
   finishHand(s, ctx);
 }
-function finishHand(s: MjState, ctx: Ctx) {
+function finishHand(s: MjState, _ctx: Ctx) {
   const L = s.lastHand!; const h = s.h!;
   for (let k = 0; k < 4; k++) s.points[k] += L.pay[k];
   s.results = [];
