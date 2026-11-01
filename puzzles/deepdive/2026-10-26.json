@@ -1,0 +1,286 @@
+{
+ "week": "2026-10-26",
+ "bankVersion": "2026-11-01-d26c5110",
+ "days": [
+  {
+   "day": 0,
+   "prompts": [
+    {
+     "id": "hi-dynasties",
+     "cat": "hi",
+     "q": "A major Chinese imperial dynasty"
+    },
+    {
+     "id": "geo-stan",
+     "cat": "geo",
+     "q": "A country whose name ends in \"-stan\""
+    },
+    {
+     "id": "sci-apes",
+     "cat": "sci",
+     "q": "A great ape"
+    },
+    {
+     "id": "sp-tennis-slams",
+     "cat": "sp",
+     "q": "A tennis Grand Slam tournament"
+    },
+    {
+     "id": "sp-mls",
+     "cat": "sp",
+     "q": "A Major League Soccer club (2026)"
+    },
+    {
+     "id": "pc-weasley",
+     "cat": "pc",
+     "q": "A Weasley in Harry Potter (Arthur and Molly's family)"
+    },
+    {
+     "id": "mtv-friends",
+     "cat": "mtv",
+     "q": "One of the six main characters in Friends"
+    }
+   ]
+  },
+  {
+   "day": 1,
+   "prompts": [
+    {
+     "id": "sp-six-nations",
+     "cat": "sp",
+     "q": "A Six Nations rugby team"
+    },
+    {
+     "id": "hi-presidents",
+     "cat": "hi",
+     "q": "A President of the United States"
+    },
+    {
+     "id": "sci-bears",
+     "cat": "sci",
+     "q": "A living species of bear"
+    },
+    {
+     "id": "sci-rainbow",
+     "cat": "sci",
+     "q": "A colour of the rainbow (ROYGBIV)"
+    },
+    {
+     "id": "mtv-best-picture",
+     "cat": "mtv",
+     "q": "A Best Picture Oscar winner"
+    },
+    {
+     "id": "geo-oceans",
+     "cat": "geo",
+     "q": "One of the world's five oceans"
+    },
+    {
+     "id": "pc-nintendo",
+     "cat": "pc",
+     "q": "A Nintendo home console"
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "prompts": [
+    {
+     "id": "hi-uk-pms",
+     "cat": "hi",
+     "q": "A UK Prime Minister since 1900"
+    },
+    {
+     "id": "mtv-jurassic",
+     "cat": "mtv",
+     "q": "A Jurassic Park or Jurassic World film"
+    },
+    {
+     "id": "sci-halogens",
+     "cat": "sci",
+     "q": "A halogen"
+    },
+    {
+     "id": "pc-reindeer",
+     "cat": "pc",
+     "q": "One of Santa's reindeer"
+    },
+    {
+     "id": "geo-canada",
+     "cat": "geo",
+     "q": "A Canadian province or territory"
+    },
+    {
+     "id": "hi-eec",
+     "cat": "hi",
+     "q": "A founding member of the European Economic Community (1957)"
+    },
+    {
+     "id": "sp-ucl",
+     "cat": "sp",
+     "q": "A club that has won the European Cup / Champions League"
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "prompts": [
+    {
+     "id": "geo-nyc",
+     "cat": "geo",
+     "q": "A borough of New York City"
+    },
+    {
+     "id": "mtv-tarantino",
+     "cat": "mtv",
+     "q": "A film directed by Quentin Tarantino"
+    },
+    {
+     "id": "hi-vp-to-pres",
+     "cat": "hi",
+     "q": "A US vice president who later became president"
+    },
+    {
+     "id": "hi-rushmore",
+     "cat": "hi",
+     "q": "A president carved on Mount Rushmore"
+    },
+    {
+     "id": "sp-ballon-dor",
+     "cat": "sp",
+     "q": "A men's Ballon d'Or winner"
+    },
+    {
+     "id": "pc-beatles",
+     "cat": "pc",
+     "q": "A member of the Beatles (ever)"
+    },
+    {
+     "id": "sci-periods",
+     "cat": "sci",
+     "q": "A geological period of the Phanerozoic eon"
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "prompts": [
+    {
+     "id": "hi-greek-gods",
+     "cat": "hi",
+     "q": "A Greek Olympian god (including Hades and Hestia)"
+    },
+    {
+     "id": "geo-seasia",
+     "cat": "geo",
+     "q": "A country in Southeast Asia"
+    },
+    {
+     "id": "hi-german-chancellors",
+     "cat": "hi",
+     "q": "A Chancellor of (West) Germany since 1949"
+    },
+    {
+     "id": "sp-nfl",
+     "cat": "sp",
+     "q": "An NFL team"
+    },
+    {
+     "id": "mtv-mcu",
+     "cat": "mtv",
+     "q": "A Marvel Cinematic Universe film"
+    },
+    {
+     "id": "sci-galilean",
+     "cat": "sci",
+     "q": "A Galilean moon of Jupiter"
+    },
+    {
+     "id": "pc-mj",
+     "cat": "pc",
+     "q": "A Michael Jackson solo studio album"
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "prompts": [
+    {
+     "id": "pc-spice",
+     "cat": "pc",
+     "q": "A Spice Girl"
+    },
+    {
+     "id": "sp-rings",
+     "cat": "sp",
+     "q": "A colour of the Olympic rings"
+    },
+    {
+     "id": "sci-alkali",
+     "cat": "sci",
+     "q": "An alkali metal"
+    },
+    {
+     "id": "geo-centralamerica",
+     "cat": "geo",
+     "q": "A country in Central America"
+    },
+    {
+     "id": "mtv-starwars",
+     "cat": "mtv",
+     "q": "A live-action Star Wars film"
+    },
+    {
+     "id": "hi-roman-gods",
+     "cat": "hi",
+     "q": "One of the twelve major Roman gods (Dii Consentes)"
+    },
+    {
+     "id": "sp-wc-hosts",
+     "cat": "sp",
+     "q": "A country that has hosted the men's FIFA World Cup"
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "prompts": [
+    {
+     "id": "hi-wonders",
+     "cat": "hi",
+     "q": "One of the Seven Wonders of the Ancient World"
+    },
+    {
+     "id": "mtv-princess",
+     "cat": "mtv",
+     "q": "An official Disney Princess"
+    },
+    {
+     "id": "mtv-middle-earth",
+     "cat": "mtv",
+     "q": "A Peter Jackson Middle-earth film"
+    },
+    {
+     "id": "geo-arabian",
+     "cat": "geo",
+     "q": "A country on the Arabian Peninsula"
+    },
+    {
+     "id": "sci-shuttles",
+     "cat": "sci",
+     "q": "A Space Shuttle orbiter"
+    },
+    {
+     "id": "sp-nba",
+     "cat": "sp",
+     "q": "An NBA team"
+    },
+    {
+     "id": "pc-taylor",
+     "cat": "pc",
+     "q": "A Taylor Swift studio album"
+    }
+   ]
+  }
+ ]
+}

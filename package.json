@@ -10,6 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "weekly": "node scripts/weekly.mjs",
+    "deepdive:weekly": "node scripts/deepdiveWeekly.mjs",
+    "deepdive:bank": "node scripts/deepdive/buildBank.mjs",
     "smoke": "node --env-file=.env.local scripts/smokeMultiplayer.mjs",
     "smoke:spywords": "node --env-file=.env.local scripts/smokeSpyWords.mjs",
     "crossword:generate": "python3 scripts/crossword/repo_generate.py",

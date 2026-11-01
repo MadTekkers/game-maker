@@ -11,8 +11,9 @@ echo "== weekly run $(date) =="
 cd "$REPO"
 git pull --rebase --autostash -q || echo "git pull failed (continuing)"
 npm run weekly
+npm run deepdive:weekly || echo "WARNING: deep dive weekly failed"
 node scripts/validateConnections.mjs | tail -3 || echo "WARNING: connections validation failed"
-git add puzzles/weekly
+git add puzzles/weekly puzzles/deepdive
 if git diff --cached --quiet; then echo "no snapshot changes"; else
   git commit -q -m "weekly: puzzles for week of $(TZ=America/Chicago date -d 'next monday' +%Y-%m-%d)" && git push -q && echo "pushed"; fi
 echo "== done $(date) =="

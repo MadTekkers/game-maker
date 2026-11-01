@@ -1,0 +1,286 @@
+{
+ "week": "2026-11-02",
+ "bankVersion": "2026-11-01-d26c5110",
+ "days": [
+  {
+   "day": 0,
+   "prompts": [
+    {
+     "id": "sp-nhl",
+     "cat": "sp",
+     "q": "An NHL team"
+    },
+    {
+     "id": "sp-mlb",
+     "cat": "sp",
+     "q": "An MLB team"
+    },
+    {
+     "id": "geo-border-china",
+     "cat": "geo",
+     "q": "A country that borders China"
+    },
+    {
+     "id": "sci-leg-bones",
+     "cat": "sci",
+     "q": "A bone of the human leg or foot"
+    },
+    {
+     "id": "mtv-nolan",
+     "cat": "mtv",
+     "q": "A film directed by Christopher Nolan"
+    },
+    {
+     "id": "hi-colonies",
+     "cat": "hi",
+     "q": "One of the original Thirteen Colonies"
+    },
+    {
+     "id": "pc-stones",
+     "cat": "pc",
+     "q": "A member of the Rolling Stones (ever)"
+    }
+   ]
+  },
+  {
+   "day": 1,
+   "prompts": [
+    {
+     "id": "mtv-bond",
+     "cat": "mtv",
+     "q": "A James Bond film"
+    },
+    {
+     "id": "sp-summer-hosts",
+     "cat": "sp",
+     "q": "A country that has hosted the Summer Olympics"
+    },
+    {
+     "id": "geo-border-canada",
+     "cat": "geo",
+     "q": "A US state that borders Canada"
+    },
+    {
+     "id": "pc-bts",
+     "cat": "pc",
+     "q": "A member of BTS"
+    },
+    {
+     "id": "sci-penguins",
+     "cat": "sci",
+     "q": "A species of penguin"
+    },
+    {
+     "id": "sci-pgm",
+     "cat": "sci",
+     "q": "A platinum-group metal"
+    },
+    {
+     "id": "hi-tudors",
+     "cat": "hi",
+     "q": "A Tudor monarch of England"
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "prompts": [
+    {
+     "id": "pc-monopoly",
+     "cat": "pc",
+     "q": "A space you can buy in Monopoly (US board)"
+    },
+    {
+     "id": "sci-planets",
+     "cat": "sci",
+     "q": "A planet in the Solar System"
+    },
+    {
+     "id": "mtv-got",
+     "cat": "mtv",
+     "q": "A Great House of Westeros (Game of Thrones)"
+    },
+    {
+     "id": "geo-africa",
+     "cat": "geo",
+     "q": "A country in Africa"
+    },
+    {
+     "id": "hi-died-office",
+     "cat": "hi",
+     "q": "A US president who died in office"
+    },
+    {
+     "id": "sci-si-base",
+     "cat": "sci",
+     "q": "An SI base unit"
+    },
+    {
+     "id": "sp-nba-champs",
+     "cat": "sp",
+     "q": "An NBA franchise that has won the championship"
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "prompts": [
+    {
+     "id": "sci-uranus-moons",
+     "cat": "sci",
+     "q": "One of the five major moons of Uranus"
+    },
+    {
+     "id": "pc-starters",
+     "cat": "pc",
+     "q": "A starter Pokémon (any generation)"
+    },
+    {
+     "id": "geo-border-brazil",
+     "cat": "geo",
+     "q": "A country that borders Brazil"
+    },
+    {
+     "id": "sp-sb-winners",
+     "cat": "sp",
+     "q": "An NFL team that has won the Super Bowl"
+    },
+    {
+     "id": "sp-positions",
+     "cat": "sp",
+     "q": "A fielding position in baseball"
+    },
+    {
+     "id": "mtv-simpsons",
+     "cat": "mtv",
+     "q": "A member of the Simpson family"
+    },
+    {
+     "id": "hi-royal-houses",
+     "cat": "hi",
+     "q": "A royal house that has ruled England or Britain"
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "prompts": [
+    {
+     "id": "hi-confederacy",
+     "cat": "hi",
+     "q": "A state that joined the Confederacy"
+    },
+    {
+     "id": "sp-wimbledon-women",
+     "cat": "sp",
+     "q": "A Wimbledon women's singles champion since 1990"
+    },
+    {
+     "id": "geo-mexico",
+     "cat": "geo",
+     "q": "A Mexican state (or Mexico City)"
+    },
+    {
+     "id": "geo-asia",
+     "cat": "geo",
+     "q": "A country in Asia"
+    },
+    {
+     "id": "mtv-spielberg",
+     "cat": "mtv",
+     "q": "A feature film directed by Steven Spielberg"
+    },
+    {
+     "id": "sci-si-prefix",
+     "cat": "sci",
+     "q": "An SI metric prefix"
+    },
+    {
+     "id": "pc-bsb",
+     "cat": "pc",
+     "q": "A member of the Backstreet Boys"
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "prompts": [
+    {
+     "id": "sci-nobel",
+     "cat": "sci",
+     "q": "A Nobel Prize category"
+    },
+    {
+     "id": "sp-chess",
+     "cat": "sp",
+     "q": "A chess piece"
+    },
+    {
+     "id": "geo-eu",
+     "cat": "geo",
+     "q": "A member state of the European Union"
+    },
+    {
+     "id": "pc-dwarfs",
+     "cat": "pc",
+     "q": "One of Disney's Seven Dwarfs"
+    },
+    {
+     "id": "sci-clouds",
+     "cat": "sci",
+     "q": "One of the ten basic cloud types (genera)"
+    },
+    {
+     "id": "hi-us-money",
+     "cat": "hi",
+     "q": "A person on a current US banknote"
+    },
+    {
+     "id": "mtv-pixar",
+     "cat": "mtv",
+     "q": "A Pixar feature film"
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "prompts": [
+    {
+     "id": "geo-southamerica",
+     "cat": "geo",
+     "q": "A country in South America"
+    },
+    {
+     "id": "pc-avengers",
+     "cat": "pc",
+     "q": "One of the six original Avengers in the 2012 film"
+    },
+    {
+     "id": "mtv-fast",
+     "cat": "mtv",
+     "q": "A Fast & Furious film"
+    },
+    {
+     "id": "sci-noble",
+     "cat": "sci",
+     "q": "A noble gas"
+    },
+    {
+     "id": "hi-unsc",
+     "cat": "hi",
+     "q": "A permanent member of the UN Security Council"
+    },
+    {
+     "id": "sp-summer-cities",
+     "cat": "sp",
+     "q": "A city that has hosted the Summer Olympics"
+    },
+    {
+     "id": "geo-equator",
+     "cat": "geo",
+     "q": "A country the Equator passes through"
+    }
+   ]
+  }
+ ]
+}
